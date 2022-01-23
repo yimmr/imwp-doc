@@ -46,6 +46,23 @@
 |       **type**       |         string         |                  类型                 |         text         |
 | **active\_callback** |        callable        |                 显示条件                |                      |
 
+小工具启用选择性刷新需要在注册时提供 before/after\_widget 两参数并添加主题支持：
+
+```php
+add_theme_support( 'customize-selective-refresh-widgets' );
+```
+
+自定义小工具启用选择性刷新需要在注册时开启：
+
+```php
+public function __construct()
+{
+    parent::__construct('foo', 'Example', [
+        'customize_selective_refresh' => true,
+    ]);
+}
+```
+
 ### 设置
 
 |            name            |        type       |                description                |        default       |
