@@ -2,35 +2,35 @@
 
 ### 面板
 
-|         name         |        type       |  default |      description     |
-| :------------------: | :---------------: | :------: | :------------------: |
-|     **priority**     |        int        | 显示位置的优先级 |          160         |
-|    **capability**    |       string      |   所需的权限  | edit\_theme\_options |
-|  **theme\_supports** | string\|string\[] |  所需的主题功能 |                      |
-|       **title**      |       string      |    标题    |                      |
-|    **description**   |       string      |    描述    |                      |
-|       **type**       |       string      |    类型    |                      |
-| **active\_callback** |      callable     |   显示条件   |                      |
+|         name         |        type       | description |        default       |
+| :------------------: | :---------------: | :---------: | :------------------: |
+|     **priority**     |        int        |   显示位置的优先级  |          160         |
+|    **capability**    |       string      |    所需的权限    | edit\_theme\_options |
+|  **theme\_supports** | string\|string\[] |   所需的主题功能   |                      |
+|       **title**      |       string      |      标题     |                      |
+|    **description**   |       string      |      描述     |                      |
+|       **type**       |       string      |      类型     |                      |
+| **active\_callback** |      callable     |     显示条件    |                      |
 
 ### 区域
 
-|           name          |        type       |   default  |      description     |
-| :---------------------: | :---------------: | :--------: | :------------------: |
-|       **priority**      |        int        |  显示位置的优先级  |          160         |
-|        **panel**        |       string      |    所属的面板   |                      |
-|      **capability**     |       string      |    所需的权限   | edit\_theme\_options |
-|   **theme\_supports**   | string\|string\[] |   所需的主题功能  |                      |
-|        **title**        |       string      |     标题     |                      |
-|     **description**     |       string      |     描述     |                      |
-|         **type**        |       string      |     类型     |                      |
-|   **active\_callback**  |      callable     |    显示条件    |                      |
-| **description\_hidden** |        bool       | 隐藏帮助图标后的描述 |         false        |
+|           name          |        type       | description |        default       |
+| :---------------------: | :---------------: | :---------: | :------------------: |
+|       **priority**      |        int        |   显示位置的优先级  |          160         |
+|        **panel**        |       string      |    所属的面板    |                      |
+|      **capability**     |       string      |    所需的权限    | edit\_theme\_options |
+|   **theme\_supports**   | string\|string\[] |   所需的主题功能   |                      |
+|        **title**        |       string      |      标题     |                      |
+|     **description**     |       string      |      描述     |                      |
+|         **type**        |       string      |      类型     |                      |
+|   **active\_callback**  |      callable     |     显示条件    |                      |
+| **description\_hidden** |        bool       |  隐藏帮助图标后的描述 |         false        |
 
 ### 控件
 
 
 
-|         name         |          type          |               default               |      description     |
+|         name         |          type          |             description             |        default       |
 | :------------------: | :--------------------: | :---------------------------------: | :------------------: |
 | **instance\_number** |           int          |             相对于其他实例的创建顺序            |                      |
 |      **manager**     | WP\_Customize\_Manager |               定制器引导实例               |                      |
@@ -52,7 +52,7 @@
 
 
 
-|            name            |        type       |                  default                  |      description     |
+|            name            |        type       |                description                |        default       |
 | :------------------------: | :---------------: | :---------------------------------------: | :------------------: |
 |          **type**          |       string      |                     类型                    |      theme\_mod      |
 |       **capability**       |       string      |                   所需的权限                   | edit\_theme\_options |
