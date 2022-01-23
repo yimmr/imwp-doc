@@ -46,6 +46,33 @@
 |       **type**       |         string         |                  类型                 |         text         |
 | **active\_callback** |        callable        |                 显示条件                |                      |
 
+### 设置
+
+|            name            |        type       |                description                |        default       |
+| :------------------------: | :---------------: | :---------------------------------------: | :------------------: |
+|          **type**          |       string      |                     类型                    |      theme\_mod      |
+|       **capability**       |       string      |                   所需的权限                   | edit\_theme\_options |
+|     **theme\_supports**    | string\|string\[] |                  所需的主题功能                  |                      |
+|         **default**        |       string      |                    默认值                    |          ''          |
+|        **transport**       |       string      | 数据传输方式。'postMessage'选择性更新预览，'refresh'重载预览 |        refresh       |
+|   **validate\_callback**   |      callable     |                   验证值的回调                  |                      |
+|   **sanitize\_callback**   |      callable     |                   清理值的回调                  |                      |
+| **sanitize\_js\_callback** |      callable     |                 转为JSON值的回调                |                      |
+|          **dirty**         |        bool       |                创建时初始设置是否已变更               |         false        |
+
+### 选择性刷新
+
+|           name           |   type   |            description           |   default   |
+| :----------------------: | :------: | :------------------------------: | :---------: |
+|         **type**         |  string  |                类型                |   default   |
+|       **selector**       |  string  |            jQuery 选择器            |             |
+|       **settings**       |  string  |    setting id，未定义时使用控件 **$id**   |             |
+|   **primary\_setting**   |  string  |        负责渲染该区域的setting id        |   $setting  |
+|      **capability**      |  string  |            编辑此区域所需的权限            | 继承自 setting |
+|   **render\_callback**   | callable | 渲染回调。回调可输出或返回需要呈现的内容，异常可返回 false |             |
+| **container\_inclusive** |   bool   |          替换整个容器还是仅替换子节点          |    false    |
+|   **fallback\_refresh**  |   bool   | 区域无法刷新时是否重载预览，回调返回 false 时视为渲染失败 |     true    |
+
 小工具启用选择性刷新需要在注册时提供 before/after\_widget 两参数并添加主题支持：
 
 ```php
@@ -75,33 +102,6 @@ public function __construct()
   When the `WidgetPartial` is refreshed with its `renderContent` method.
 * `sidebar-updated`\
   When a sidebar has a widget that’s refreshed or updated. Or when a sidebar’s widgets are sorted, using `reflowWidgets()`.
-
-### 设置
-
-|            name            |        type       |                description                |        default       |
-| :------------------------: | :---------------: | :---------------------------------------: | :------------------: |
-|          **type**          |       string      |                     类型                    |      theme\_mod      |
-|       **capability**       |       string      |                   所需的权限                   | edit\_theme\_options |
-|     **theme\_supports**    | string\|string\[] |                  所需的主题功能                  |                      |
-|         **default**        |       string      |                    默认值                    |          ''          |
-|        **transport**       |       string      | 数据传输方式。'postMessage'选择性更新预览，'refresh'重载预览 |        refresh       |
-|   **validate\_callback**   |      callable     |                   验证值的回调                  |                      |
-|   **sanitize\_callback**   |      callable     |                   清理值的回调                  |                      |
-| **sanitize\_js\_callback** |      callable     |                 转为JSON值的回调                |                      |
-|          **dirty**         |        bool       |                创建时初始设置是否已变更               |         false        |
-
-### 选择性刷新
-
-|           name           |   type   |            description           |   default   |
-| :----------------------: | :------: | :------------------------------: | :---------: |
-|         **type**         |  string  |                类型                |   default   |
-|       **selector**       |  string  |            jQuery 选择器            |             |
-|       **settings**       |  string  |    setting id，未定义时使用控件 **$id**   |             |
-|   **primary\_setting**   |  string  |        负责渲染该区域的setting id        |   $setting  |
-|      **capability**      |  string  |            编辑此区域所需的权限            | 继承自 setting |
-|   **render\_callback**   | callable | 渲染回调。回调可输出或返回需要呈现的内容，异常可返回 false |             |
-| **container\_inclusive** |   bool   |          替换整个容器还是仅替换子节点          |    false    |
-|   **fallback\_refresh**  |   bool   | 区域无法刷新时是否重载预览，回调返回 false 时视为渲染失败 |     true    |
 
 ### 内置自定义控件
 
