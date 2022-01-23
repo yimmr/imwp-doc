@@ -44,7 +44,7 @@
 |    **description**   |         string         |                  描述                 |                      |
 |      **choices**     |          array         | 'radio' 或 'select' 控件的选项列表，键为值，值为标识 |                      |
 |   **input\_attrs**   |          array         |               输入框的属性数组              |                      |
-|  **allow\_addition** |          bool          |        显示新增内容的 UI，目前仅用于下拉页面控件       |         false        |
+|  **allow\_addition** |          bool          |        允许用户添加新页面，目前仅用于下拉页面控件        |         false        |
 |       **type**       |         string         |                  类型                 |                      |
 | **active\_callback** |        callable        |                 显示条件                |                      |
 
