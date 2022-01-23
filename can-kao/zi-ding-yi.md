@@ -9,7 +9,7 @@
 |  **theme\_supports** | string\|string\[] |   所需的主题功能   |                      |
 |       **title**      |       string      |      标题     |                      |
 |    **description**   |       string      |      描述     |                      |
-|       **type**       |       string      |      类型     |                      |
+|       **type**       |       string      |      类型     |        default       |
 | **active\_callback** |      callable     |     显示条件    |                      |
 
 ### 区域
@@ -22,7 +22,7 @@
 |   **theme\_supports**   | string\|string\[] |   所需的主题功能   |                      |
 |        **title**        |       string      |      标题     |                      |
 |     **description**     |       string      |      描述     |                      |
-|         **type**        |       string      |      类型     |                      |
+|         **type**        |       string      |      类型     |        default       |
 |   **active\_callback**  |      callable     |     显示条件    |                      |
 | **description\_hidden** |        bool       |  隐藏帮助图标后的描述 |         false        |
 
@@ -40,10 +40,10 @@
 |      **section**     |         string         |                所属的区域                |                      |
 |       **label**      |         string         |                  标识                 |                      |
 |    **description**   |         string         |                  描述                 |                      |
-|      **choices**     |          array         | 'radio' 或 'select' 控件的选项列表，键为值，值为标识 |                      |
-|   **input\_attrs**   |          array         |               输入框的属性数组              |                      |
+|      **choices**     |          array         | 'radio' 或 'select' 控件的选项列表，键为值，值为标识 |          \[]         |
+|   **input\_attrs**   |          array         |               输入框的属性数组              |          \[]         |
 |  **allow\_addition** |          bool          |        允许用户添加新页面，目前仅用于下拉页面控件        |         false        |
-|       **type**       |         string         |                  类型                 |                      |
+|       **type**       |         string         |                  类型                 |         text         |
 | **active\_callback** |        callable        |                 显示条件                |                      |
 
 ### 设置
@@ -58,7 +58,7 @@
 |   **validate\_callback**   |      callable     |                   验证值的回调                  |                      |
 |   **sanitize\_callback**   |      callable     |                   清理值的回调                  |                      |
 | **sanitize\_js\_callback** |      callable     |                 转为JSON值的回调                |                      |
-|          **dirty**         |        bool       |                创建时初始设置是否已变更               |                      |
+|          **dirty**         |        bool       |                创建时初始设置是否已变更               |         false        |
 
 ### 选择性刷新
 
