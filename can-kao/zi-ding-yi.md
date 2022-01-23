@@ -28,8 +28,6 @@
 
 ### 控件
 
-
-
 |         name         |          type          |             description             |        default       |
 | :------------------: | :--------------------: | :---------------------------------: | :------------------: |
 | **instance\_number** |           int          |             相对于其他实例的创建顺序            |                      |
@@ -50,8 +48,6 @@
 
 ### 设置
 
-
-
 |            name            |        type       |                description                |        default       |
 | :------------------------: | :---------------: | :---------------------------------------: | :------------------: |
 |          **type**          |       string      |                     类型                    |      theme\_mod      |
@@ -63,6 +59,19 @@
 |   **sanitize\_callback**   |      callable     |                   清理值的回调                  |                      |
 | **sanitize\_js\_callback** |      callable     |                 转为JSON值的回调                |                      |
 |          **dirty**         |        bool       |                创建时初始设置是否已变更               |                      |
+
+### 选择性刷新
+
+|           name           |   type   |            description           |   default   |
+| :----------------------: | :------: | :------------------------------: | :---------: |
+|         **type**         |  string  |                类型                |   default   |
+|       **selector**       |  string  |            jQuery 选择器            |             |
+|       **settings**       |  string  |    setting id，未定义时使用控件 **$id**   |             |
+|   **primary\_setting**   |  string  |        负责渲染该区域的setting id        |   $setting  |
+|      **capability**      |  string  |            编辑此区域所需的权限            | 继承自 setting |
+|   **render\_callback**   | callable | 渲染回调。回调可输出或返回需要呈现的内容，异常可返回 false |             |
+| **container\_inclusive** |   bool   |          替换整个容器还是仅替换子节点          |    false    |
+|   **fallback\_refresh**  |   bool   | 区域无法刷新时是否重载预览，回调返回 false 时视为渲染失败 |     true    |
 
 ### 内置自定义控件
 
