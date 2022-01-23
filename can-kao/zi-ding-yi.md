@@ -63,3 +63,13 @@
 |   **sanitize\_callback**   |      callable     |                   清理值的回调                  |                      |
 | **sanitize\_js\_callback** |      callable     |                 转为JSON值的回调                |                      |
 |          **dirty**         |        bool       |                创建时初始设置是否已变更               |                      |
+
+### 内置自定义控件
+
+|                    class                   |               description               | value type |
+| :----------------------------------------: | :-------------------------------------: | :--------: |
+|      **WP\_Customize\_Media\_Control**     | WordPress 媒体管理器，限制上传类型用 'mime\_type' 参数 |    附件 ID   |
+| **WP\_Customize\_Cropped\_Image\_Control** |                选择图像后可裁剪图像               |   附件 URL   |
+|     **WP\_Customize\_Upload\_Control**     |                   附件上传                  |   附件 URL   |
+|      **WP\_Customize\_Color\_Control**     |                  颜色选择器                  |   string   |
+
