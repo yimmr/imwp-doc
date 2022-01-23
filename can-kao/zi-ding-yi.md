@@ -63,6 +63,19 @@ public function __construct()
 }
 ```
 
+选择性刷新 `wp.customize.selectiveRefresh` 的 JS 事件：
+
+* `partial-content-rendered`\
+  When the placement is rendered. As mentioned, JavaScript-driven widgets can re-build on this event.
+* `render-partials-response`\
+  When data is returned, after a request for partial rendering. The server filters this data with ‘customize\_render\_partials\_response’.
+* `partial-content-moved`\
+  When a widget has moved in its sidebar. As shown above, JavaScript-driven widgets can refresh on this event.
+* `widget-updated`\
+  When the `WidgetPartial` is refreshed with its `renderContent` method.
+* `sidebar-updated`\
+  When a sidebar has a widget that’s refreshed or updated. Or when a sidebar’s widgets are sorted, using `reflowWidgets()`.
+
 ### 设置
 
 |            name            |        type       |                description                |        default       |
