@@ -2,7 +2,7 @@
 
 ### 介绍
 
-impack/wordpress（简称 imwp）是用面向对象方式开发 WordPress 主题/插件的小型库。
+impack/wordpress（简称 imwp）封装了一些 WordPress 二次开发中可能用到通用功能。**目前这是本人自用的代码库，如果你使用此库则需要自己承担问题。**
 
 {% hint style="success" %}
 使用前，你需要了解关于 [PHP命名空间](https://www.php.net/manual/zh/language.namespaces.rationale.php)、[Composer](https://www.phpcomposer.com) 的基础知识。imwp 的功能均是PHP类，并使用 Composer 自动加载，这也能预防命名冲突。
