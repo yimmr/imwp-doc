@@ -60,7 +60,7 @@
 | **sanitize\_js\_callback** |      callable     |                 转为JSON值的回调                |                      |
 |          **dirty**         |        bool       |                创建时初始设置是否已变更               |         false        |
 
-### 选择性刷新
+### 选择更新
 
 |           name           |   type   |            description           |   default   |
 | :----------------------: | :------: | :------------------------------: | :---------: |
@@ -73,13 +73,13 @@
 | **container\_inclusive** |   bool   |          替换整个容器还是仅替换子节点          |    false    |
 |   **fallback\_refresh**  |   bool   | 区域无法刷新时是否重载预览，回调返回 false 时视为渲染失败 |     true    |
 
-小工具启用选择性刷新需要在注册时提供 before/after\_widget 两参数并添加主题支持：
+小工具启用选择更新需要在注册时提供 before/after\_widget 两参数并添加主题支持：
 
 ```php
 add_theme_support( 'customize-selective-refresh-widgets' );
 ```
 
-自定义小工具启用选择性刷新需要在注册时开启：
+自定义小工具启用选择更新需要在注册时开启：
 
 ```php
 public function __construct()
@@ -90,7 +90,7 @@ public function __construct()
 }
 ```
 
-选择性刷新 `wp.customize.selectiveRefresh` 的 JS 事件：
+选择更新 `wp.customize.selectiveRefresh` 的 JS 事件：
 
 * `partial-content-rendered`\
   When the placement is rendered. As mentioned, JavaScript-driven widgets can re-build on this event.
