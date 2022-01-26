@@ -5,8 +5,8 @@
 ## 基本功能
 
 * [核心](ji-ben-gong-neng/he-xin.md)
-* [扩展](ji-ben-gong-neng/kuo-zhan.md)
-* [配置文件](ji-ben-gong-neng/pei-zhi.md)
+* [Trait](ji-ben-gong-neng/trait.md)
+* [配置](ji-ben-gong-neng/pei-zhi.md)
 * [菜单页面](ji-ben-gong-neng/cai-dan-ye-mian.md)
 * [组件](ji-ben-gong-neng/zu-jian-1/README.md)
   * [菜单页面](ji-ben-gong-neng/zu-jian-1/cai-dan-ye-mian.md)
