@@ -15,11 +15,15 @@ Trait全名： `Impack\WP\Base\OptionTrait` 。
 * updateOption
 * deleteOption
 
-功能和 WordPress 的函数一致，只是选项名称不需带上前缀，操作不带名称前缀的选项仍需使用内置函数。例如简单获取选项 `imwp_text` 的值：
+功能与 WordPress 函数一致，只是省去了名称前缀，例如简单获取选项 `imwp_text` 的值：
 
 ```php
 $this->getOption('text');
 ```
+
+{% hint style="success" %}
+与不含名称前缀的选项交互时应使用 WordPress 提供的函数。
+{% endhint %}
 
 ### 单例容器
 
