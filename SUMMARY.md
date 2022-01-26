@@ -7,9 +7,12 @@
 * [核心](ji-ben-gong-neng/he-xin.md)
 * [Trait](ji-ben-gong-neng/kuo-zhan.md)
 * [配置](ji-ben-gong-neng/pei-zhi.md)
-* [菜单页面](ji-ben-gong-neng/cai-dan-ye-mian.md)
-* [组件](ji-ben-gong-neng/zu-jian-1/README.md)
-  * [菜单页面](ji-ben-gong-neng/zu-jian-1/cai-dan-ye-mian.md)
+
+## 后台功能
+
+* [添加页面](hou-tai-gong-neng/tian-jia-ye-mian.md)
+* [页面组件](hou-tai-gong-neng/cai-dan-ye-mian.md)
+* [表单组件](hou-tai-gong-neng/zu-jian-1.md)
 
 ## 注册管理
 

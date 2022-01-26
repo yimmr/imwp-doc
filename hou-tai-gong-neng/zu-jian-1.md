@@ -1,4 +1,4 @@
-# 组件
+# 表单组件
 
 组件一般是构建HTML的静态类。
 
@@ -19,7 +19,7 @@
 |     image     |     图片上传    |
 |   imageGroup  |     多图上传    |
 
-图片组默认限制上传3张，配置 `count` 属性可以覆盖该值。[表单配置参考](../cai-dan-ye-mian.md#biao-dan-pei-zhi)
+图片组默认限制上传3张，配置 `count` 属性可以覆盖该值。[表单配置参考](broken-reference)
 
 {% hint style="success" %}
 **image** 组件基于WP的图片上传，使用时需要调用静态方法 `enqueue` 入队脚本样式。使用多图上传需要过滤表单提交的值，因为没有全部上传的id数组会带0值

@@ -1,6 +1,6 @@
 # 表单配置
 
-这里提供了表单字段的配置项的一些约定，以便结合 [内置表单](../ji-ben-gong-neng/zu-jian-1/#main-zu-jian-shi-yong-shi-li) 、vue 等各种组件使用。
+这里提供了表单字段的配置项的一些约定，以便结合 [内置表单](../hou-tai-gong-neng/zu-jian-1.md#main-zu-jian-shi-yong-shi-li) 、vue 等各种组件使用。
 
 表单配置是字段名与属性关联的键值对数组，字段的属性如下：
 
