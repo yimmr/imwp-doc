@@ -74,7 +74,7 @@ public function provider()
 }
 ```
 
-如果参数值是数组则可以将绑定外部对象方法：
+如果参数值是数组则可以绑定外部对象的方法：
 
 ```php
 if(\is_admin()){
