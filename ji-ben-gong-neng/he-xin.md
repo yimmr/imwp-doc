@@ -13,8 +13,6 @@ use Impack\WP\Base\Core;
 class Theme extends Core
 {
     protected static $instance;
-    
-    public $prefix = 'mytheme';
 
     public function provider()
     {
@@ -30,19 +28,20 @@ class Theme extends Core
 
 ### 核心类属性
 
-|     名称    |                                    说明                                   |  默认值 |
-| :-------: | :---------------------------------------------------------------------: | :--: |
-|   prefix  |                                  通用前缀，                                  | imwp |
-|   config  |                           预留用于获取 **config** 单例                          |      |
-|  path/url |                                （受保护）基本路径                                |      |
-| instances | （受保护）单例列表，可直接添加单例到数组中，或使用 [ContainerTrait](kuo-zhan.md#dan-li-rong-qi)  |  \[] |
-|  bindings | （受保护）类名列表，可直接添加类名到数组中，或使用 [ContainerTrait](kuo-zhan.md#dan-li-rong-qi)  |  \[] |
+|     名称    |  权限 | 默认值 |                                 说明                                 |
+| :-------: | :-: | :-: | :----------------------------------------------------------------: |
+|   config  |  公开 |     |                        预留用于获取 **config** 单例                        |
+|   prefix  | 受保护 |     |                   名称前缀。一般用在 `meta` 和 `option` 键名                   |
+|  path/url | 受保护 |     |                                基本路径                                |
+| instances | 受保护 | \[] | 单例列表，可直接添加单例到数组中，或使用 [ContainerTrait](kuo-zhan.md#dan-li-rong-qi)  |
+|  bindings | 受保护 | \[] | 类名列表，可直接添加类名到数组中，或使用 [ContainerTrait](kuo-zhan.md#dan-li-rong-qi)  |
 
 ### **核心类支持的方法**
 
 |             方法             |          说明         |
 | :------------------------: | :-----------------: |
-|           prefix           |       返回带前缀的键名      |
+|           prefix           |     为指定名称附加前缀并返回    |
+|          getPrefix         |        返回名称前缀       |
 |           action           |     动作钩子与对象方法绑定     |
 |           filter           |     过滤钩子与对象方法绑定     |
 | path/publicPath/configPath |  拼接路径（基于实例化时提供的目录）  |
@@ -57,7 +56,7 @@ class Theme extends Core
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
-new \App\Theme(get_stylesheet_directory(), get_stylesheet_directory_uri());
+new \App\Theme(get_stylesheet_directory(), get_stylesheet_directory_uri(), 'mytheme');
 ```
 
 {% hint style="success" %}
