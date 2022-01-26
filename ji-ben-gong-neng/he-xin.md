@@ -12,6 +12,10 @@ use Impack\WP\Base\Core;
 
 class Theme extends Core
 {
+    protected static $instance;
+    
+    public $prefix = 'mytheme';
+
     public function provider()
     {
         $this->action('after_setup_theme');
@@ -23,6 +27,16 @@ class Theme extends Core
     }
 }
 ```
+
+### 核心类属性
+
+|     名称    |                                    说明                                   |  默认值 |
+| :-------: | :---------------------------------------------------------------------: | :--: |
+|   prefix  |                                  通用前缀，                                  | imwp |
+|   config  |                           预留用于获取 **config** 单例                          |      |
+|  path/url |                                （受保护）基本路径                                |      |
+| instances | （受保护）单例列表，可直接添加单例到数组中，或使用 [ContainerTrait](kuo-zhan.md#dan-li-rong-qi)  |  \[] |
+|  bindings | （受保护）类名列表，可直接添加类名到数组中，或使用 [ContainerTrait](kuo-zhan.md#dan-li-rong-qi)  |  \[] |
 
 ### **核心类支持的方法**
 
