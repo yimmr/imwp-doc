@@ -5,7 +5,7 @@
 ## 基本功能
 
 * [核心](ji-ben-gong-neng/he-xin.md)
-* [应用容器](ji-ben-gong-neng/fu-wu-rong-qi.md)
+* [扩展](ji-ben-gong-neng/kuo-zhan.md)
 * [配置文件](ji-ben-gong-neng/pei-zhi.md)
 * [菜单页面](ji-ben-gong-neng/cai-dan-ye-mian.md)
 * [组件](ji-ben-gong-neng/zu-jian-1/README.md)
