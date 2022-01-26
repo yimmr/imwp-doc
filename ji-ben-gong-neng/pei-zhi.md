@@ -79,6 +79,17 @@ $this->config->get('default.navs.primary');
 调用 `set()` 方法时，若键名为 <mark style="color:yellow;">`null`</mark> ，将把所有缓存的数据重置为第二个参数提供的值，请确保值是数组，以免出现意外错误。&#x20;
 {% endhint %}
 
+#### 自定义配置文件路径
+
+仅有一个配置文件时，可能没有必要放在 `config` 目录。例如将配置文件放在插件主目录下并将文件取名为 `config.default.php` ，此时需要重写主类的 `configPath` 方法，仅返回主目录下的配置文件路径：
+
+```php
+public function configPath($path = '')
+{
+    return $this->path . \DIRECTORY_SEPARATOR . 'config.' . $path;
+}
+```
+
 #### 功能参考
 
 |     名称     |           参数           |     说明     |
