@@ -1,6 +1,8 @@
 # 核心
 
-核心类提供了拼接路径、读取配置文件、绑定钩子及管理单例等基础功能。使用这些功能前主题的主类需要继承核心类 `Impack\WP\Base\Core` 并实现 `provider()` 方法：
+### **概要**
+
+核心类提供路径拼接、绑定钩子和管理名称前缀等基本功能。使用这些功能前主类需要继承核心类 `Impack\WP\Base\Core` 并实现 `provider()` 方法，此方法将在实例化时自动执行，因此可以在方法内**添加钩子**、**注册单例**等。一个简单的例子：
 
 ```php
 <?php
@@ -12,9 +14,61 @@ class Theme extends Core
 {
     public function provider()
     {
-        $this->useConfig();
+        $this->action('after_setup_theme');
+    }
+    
+    public function after_setup_theme()
+    {
+        // do something...
     }
 }
 ```
 
-实例化主类时将自动执行实例的 `provider()` 方法，你可以在此方法内**添加钩子**、**注册单例**或**扩展主类**等。
+### **核心类支持的方法**
+
+|             方法             |          说明         |
+| :------------------------: | :-----------------: |
+|           prefix           |       返回带前缀的键名      |
+|           action           |     动作钩子与对象方法绑定     |
+|           filter           |     过滤钩子与对象方法绑定     |
+| path/publicPath/configPath |  拼接路径（基于实例化时提供的目录）  |
+|        URL/publicURL       | 拼接URL（基于实例化时提供的URL） |
+|              i             |   （**静态方法**）返回主类单例  |
+
+### **实例化主类**
+
+主类一般在主题 `functions.php` 文件中实例化，文件中还可以引入 `composer` 实现类自动加载：
+
+```php
+<?php
+require_once __DIR__ . '/vendor/autoload.php';
+
+new \App\Theme(get_stylesheet_directory(), get_stylesheet_directory_uri());
+```
+
+{% hint style="success" %}
+提供的路径不能尾随斜杠，也不自动去除斜杠，如果想预防意外错误可以这样写：<mark style="color:blue;">`new \App\Theme(rtrim(__DIR__,'\/'));`</mark> <mark style="color:blue;"></mark><mark style="color:blue;"></mark> 。
+{% endhint %}
+
+#### **快捷绑定钩子**
+
+使用 `action` 和 `filter` 可以将类方法与钩子绑定，此方式要求钩子名称与方法名一致。例如将对象的 `init` 方法添加到 `init` 钩子：
+
+```php
+public function provider()
+{
+    $this->action('init');
+}
+```
+
+此外，如果参数值是数组则可以将其他对象的方法加入钩子：
+
+```php
+if(\is_admin()){
+    $this->action([$object, 'admin_init']);
+}
+```
+
+{% hint style="success" %}
+如果普通方法使用驼峰式命名，钩子回调使用下划线式命名，有些时候就可以通过命名风格区分它们。
+{% endhint %}
