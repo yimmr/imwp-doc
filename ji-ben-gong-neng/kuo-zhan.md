@@ -1,4 +1,4 @@
-# 扩展
+# Trait
 
 本节介绍的均为 PHP Trait ，主类 `use TraitName` 就可以扩展对应的功能，当然也可以扩展其他类。
 

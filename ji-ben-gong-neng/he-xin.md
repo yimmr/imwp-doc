@@ -28,13 +28,13 @@ class Theme extends Core
 
 ### 核心类属性
 
-|     名称    |  权限 | 默认值 |                                说明                               |
-| :-------: | :-: | :-: | :-------------------------------------------------------------: |
-|   config  |  公开 |     |                       可选的把属性指向 `config` 单例                      |
-|   prefix  | 受保护 |     |                  名称前缀。一般用在 `meta` 和 `option` 键名                 |
-|  path/url | 受保护 |     |                               基本路径                              |
-| instances | 受保护 | \[] | 单例列表，可直接添加单例到数组中，或使用 [ContainerTrait](trait.md#dan-li-rong-qi)  |
-|  bindings | 受保护 | \[] | 类名列表，可直接添加类名到数组中，或使用 [ContainerTrait](trait.md#dan-li-rong-qi)  |
+|     名称    |  权限 | 默认值 |                                 说明                                 |
+| :-------: | :-: | :-: | :----------------------------------------------------------------: |
+|   config  |  公开 |     |                        可选的把属性指向 `config` 单例                        |
+|   prefix  | 受保护 |     |                   名称前缀。一般用在 `meta` 和 `option` 键名                   |
+|  path/url | 受保护 |     |                                基本路径                                |
+| instances | 受保护 | \[] | 单例列表，可直接添加单例到数组中，或使用 [ContainerTrait](kuo-zhan.md#dan-li-rong-qi)  |
+|  bindings | 受保护 | \[] | 类名列表，可直接添加类名到数组中，或使用 [ContainerTrait](kuo-zhan.md#dan-li-rong-qi)  |
 
 ### **核心类支持的方法**
 

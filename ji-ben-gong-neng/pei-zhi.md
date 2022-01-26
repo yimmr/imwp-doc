@@ -36,9 +36,9 @@ return [
 
 如果需求不复杂，可以简单自定义读取配置文件的方法，同时可用核心类的 `configPath()` 拼接文件路径。或者使用封装好的 `Impack\WP\Base\Config` 类来与配置文件交互，具体用法可参考下方教程。
 
-主类使用 [ContainerTrait](trait.md#dan-li-rong-qi) 时应调用 `useConfig()` 创建单例，反之手动创建单例，`Impack\WP\Base\Config` 类使用主类的 `configPath()` 获取文件路径，使用前确保主类已实现该方法。
+主类使用 [ContainerTrait](kuo-zhan.md#dan-li-rong-qi) 时应调用 `useConfig()` 创建单例，反之手动创建单例，`Impack\WP\Base\Config` 类使用主类的 `configPath()` 获取文件路径，使用前确保主类已实现该方法。
 
-**在 `provider()` 中创建 `Config` 单例**：
+#### **在 `provider()` 中创建 `Config` 单例**：
 
 ```php
 public function provider()
@@ -57,7 +57,7 @@ public function provider()
 一个配置文件默认仅加载一次，如果想重新加载配置，应调用 `loadConfig(`) 方法，需提供不带扩展名的文件名，同时第二个参数为**真**。
 {% endhint %}
 
-**读取配置**
+#### **读取配置**
 
 读取方式是以键名作为参数调用 `get()` 方法，顶层键名是不带扩展名的文件名，例如获取 `default.php` 文件返回的所有数据：
 
@@ -71,33 +71,22 @@ $this->config->get('default');
 $this->config->get('default.navs.primary');
 ```
 
-**判断/设置/移除**
+#### **判断/设置/移除**
 
-判断、设置及移除分别对应 `has()` 、 `set()` 、 `forget()` 方法对应，键名所支持的用法与 `get()` 一致。
+判断、设置及移除功能分别对应 `has()` 、 `set()` 、 `forget()` 方法对应，键名所支持的用法与 `get()` 一致。
 
 {% hint style="danger" %}
 调用 `set()` 方法时，若键名为 <mark style="color:yellow;">`null`</mark> ，将把所有缓存的数据重置为第二个参数提供的值，请确保值是数组，以免出现意外错误。&#x20;
 {% endhint %}
 
-**四个交互方法：**
+#### 功能参考
 
-|   名称   |  参数  |    说明   |
-| :----: | :--: | :-----: |
-|   has  | $key | 是否存在配置项 |
-|   get  |      |  读取配置项  |
-|   set  |      |  设置配置项  |
-| forget |      |  移除配置项  |
+|     名称     |           参数           |     说明     |
+| :--------: | :--------------------: | :--------: |
+|     has    |          $key          |   是否存在配置项  |
+|     get    |  $key, $default = null |    读取配置值   |
+|     set    |   $key, $value = null  |    设置配置项   |
+|   forget   |          $keys         | 移除单个或一组配置项 |
+| loadConfig | $name, $reload = false |   加载配置文件   |
 
-**支持与 wp\_options 表交互**
-
-Config类除了与配置文件交互，还支持与 `wp_options` 表交互，它基于WP `get_option` 函数实现，也支持增删改查。用法是将键名改为 `option` 并带上选项名，例如读取网站URL：
-
-```php
-echo $this->app->make('config')->get('option.siteurl');
-```
-
-已读的数据都缓存在 option 中，因此可以读取所有已读的选项：
-
-```php
-print_r($this->app->make('config')->get('option'));
-```
+****
