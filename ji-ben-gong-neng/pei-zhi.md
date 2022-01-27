@@ -73,7 +73,7 @@ $this->config->get('default.navs.primary');
 
 #### **判断/设置/移除**
 
-判断、设置及移除功能分别对应 `has()` 、 `set()` 、 `forget()` 方法对应，键名所支持的用法与 `get()` 一致。
+判断、设置及移除功能分别对应 `has()` 、 `set()` 、 `forget()` 方法，键名用法与 `get()` 一致。
 
 {% hint style="danger" %}
 调用 `set()` 方法时，若键名为 <mark style="color:yellow;">`null`</mark> ，将把所有缓存的数据重置为第二个参数提供的值，请确保值是数组，以免出现意外错误。&#x20;
