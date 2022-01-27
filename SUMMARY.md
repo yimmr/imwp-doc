@@ -20,18 +20,12 @@
 * [MetaBox](zhu-ce-guan-li/metabox.md)
 * [TaxField](zhu-ce-guan-li/taxfield.md)
 
-## 数据模型
+## 综合
 
-* [简介](shu-ju-mo-xing/qian-yan.md)
-* [基本用法](shu-ju-mo-xing/yong-fa.md)
-* [核心模型](shu-ju-mo-xing/he-xin-mo-xing.md)
-* [选项模型](shu-ju-mo-xing/xuan-xiang-mo-xing.md)
-
-## 杂项
-
-* [轻量服务](za-xiang/fu-wu.md)
-* [文件系统](za-xiang/wen-jian-xi-tong.md)
-* [脚本队列](za-xiang/jiao-ben-dui-lie.md)
+* [视图&数据](zong-he/shi-tu-shu-ju.md)
+* [轻量服务](zong-he/fu-wu.md)
+* [文件系统](zong-he/wen-jian-xi-tong.md)
+* [脚本队列](zong-he/jiao-ben-dui-lie.md)
 
 ## 速记
 
