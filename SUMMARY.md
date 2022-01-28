@@ -48,13 +48,6 @@
 * [Page Slug](can-kao/hou-tai-cai-dan.md)
 * [Settings](guan-li-duan-can-kao/settings.md)
 
-## 笔记
-
-* [全局变量](bi-ji/quan-ju-bian-liang-1.md)
-* [全局对象](bi-ji/shi-li.md)
-* [实用函数](can-kao/han-shu.md)
-* [数据库字段](bi-ji/shu-ju-ku-zi-duan.md)
-
 ## 钩子参考
 
 * [后端基本](can-kao/gou-zi/hou-tai-ji-ben.md)
@@ -64,3 +57,10 @@
 * [构建主查询](can-kao/gou-zi/filter.md)
 * [登录注册](can-kao/gou-zi/deng-lu.md)
 * [其他](can-kao/gou-zi/qi-ta.md)
+
+## 笔记
+
+* [全局变量](can-kao/chang-liang/quan-ju-bian-liang-1.md)
+* [全局对象](can-kao/chang-liang/shi-li.md)
+* [实用函数](can-kao/han-shu.md)
+* [数据库字段](bi-ji/shu-ju-ku-zi-duan.md)
