@@ -1,4 +1,4 @@
-# 后台菜单Slug
+# Page Slug
 
 调用 `add_{$name}_page` 可以添加子菜单页面
 

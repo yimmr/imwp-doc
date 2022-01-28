@@ -27,9 +27,7 @@
 * [轻量服务](zong-he/fu-wu.md)
 * [文件系统](zong-he/wen-jian-xi-tong.md)
 * [脚本队列](zong-he/jiao-ben-dui-lie.md)
-* [表单配置](zong-he/biao-dan-pei-zhi.md)
-
-## 速记
+* [表单配置](can-kao/biao-dan-pei-zhi.md)
 
 ## 参考
 
@@ -38,33 +36,31 @@
   * [term](can-kao/query/term.md)
   * [user](can-kao/query/user.md)
   * [comment](can-kao/query/comment.md)
-* [PostType](can-kao/zhu-ce-de-can-shu.md)
+* [Post Type](can-kao/zhu-ce-de-can-shu.md)
 * [Taxonomy](can-kao/taxonomy-can-shu.md)
 * [Meta](can-kao/meta-can-shu.md)
 * [Nav](can-kao/menu-can-shu.md)
 * [分页](can-kao/fen-ye-can-shu.md)
-* [全局](can-kao/chang-liang/README.md)
-  * [选项](can-kao/chang-liang/xuan-xiang.md)
-  * [变量](can-kao/chang-liang/quan-ju-bian-liang-1.md)
-  * [实例](can-kao/chang-liang/shi-li.md)
 
 ## 管理端参考
 
-* [Customize](guan-li-duan-can-kao/customize.md)
-* [Page Slug](guan-li-duan-can-kao/hou-tai-cai-dan.md)
+* [Customize](can-kao/zi-ding-yi.md)
+* [Page Slug](can-kao/hou-tai-cai-dan.md)
 * [Settings](guan-li-duan-can-kao/settings.md)
 
 ## 笔记
 
-* [实用函数](bi-ji/han-shu.md)
+* [全局变量](bi-ji/quan-ju-bian-liang-1.md)
+* [全局对象](bi-ji/shi-li.md)
+* [实用函数](can-kao/han-shu.md)
 * [数据库字段](bi-ji/shu-ju-ku-zi-duan.md)
 
 ## 钩子参考
 
-* [后端基本](gou-zi-can-kao/hou-tai-ji-ben.md)
-* [文章管理](gou-zi-can-kao/wen-zhang-guan-li.md)
-* [HTTP](gou-zi-can-kao/http.md)
-* [基本流程](gou-zi-can-kao/gou-zi.md)
-* [构建主查询](gou-zi-can-kao/filter.md)
-* [登录注册](gou-zi-can-kao/deng-lu.md)
-* [其他](gou-zi-can-kao/qi-ta.md)
+* [后端基本](can-kao/gou-zi/hou-tai-ji-ben.md)
+* [文章管理](can-kao/gou-zi/wen-zhang-guan-li.md)
+* [HTTP](can-kao/gou-zi/http.md)
+* [基本流程](can-kao/gou-zi/README.md)
+* [构建主查询](can-kao/gou-zi/filter.md)
+* [登录注册](can-kao/gou-zi/deng-lu.md)
+* [其他](can-kao/gou-zi/qi-ta.md)
