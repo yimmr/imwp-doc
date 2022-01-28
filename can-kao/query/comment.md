@@ -47,7 +47,3 @@
 |         cache\_domain        |               |  core |                                                                                                                                                  对象缓存键                                                                                                                                                 |
 | update\_comment\_meta\_cache |               |  true |                                                                                                                                              是否缓存查询的评论的元数据                                                                                                                                             |
 | update\_comment\_post\_cache |               | false |                                                                                                                                                是否缓存评论的帖子                                                                                                                                               |
-
-|   |   |   |   |
-| - | - | - | - |
-|   |   |   |   |
