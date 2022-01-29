@@ -11,7 +11,7 @@
 
 ## 后台功能
 
-* [设置](hou-tai-gong-neng/she-zhi.md)
+* [设置](hou-tai-gong-neng/tian-jia-ye-mian.md)
 * [页面组件](hou-tai-gong-neng/cai-dan-ye-mian.md)
 * [表单组件](hou-tai-gong-neng/zu-jian-1.md)
 
