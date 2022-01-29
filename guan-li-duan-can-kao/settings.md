@@ -16,6 +16,10 @@
 |   show\_in\_rest   | bool\|array |                        是否出现在 REST API 中。参数还可以是 'schema' key 数组。                       |  false |
 |       default      |    mixed    |                                          默认值                                          |        |
 
+{% hint style="success" %}
+一般只用到 `$args` 的 `sanitize_callback` 和 `default` 参数，其他的参数仅在 `REST API` 使用。
+{% endhint %}
+
 ### add\_settings\_section
 
 |    名称    |    类型    |       描述      |  默认 |
