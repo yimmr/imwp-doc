@@ -4,7 +4,7 @@ description: 此组件是一个静态类，用于输出指定HTML
 
 # 表单组件
 
-### 类名
+### 普通表单组件
 
 组件完整类名： `Impack\WP\Components\Form`&#x20;
 
@@ -62,13 +62,13 @@ Form::select('fruit', '苹果',[
 ]);
 ```
 
-### 分类法表单字段
+### 分类法表单组件
 
 类名 `Impack\WP\Components\TaxFrom`
 
-|     名称    |      说明     |
-| :-------: | :---------: |
-|  addField | 输出新建标签的字段组件 |
-| editField | 输出编辑标签的字段组件 |
+|     名称    |     说明     |
+| :-------: | :--------: |
+|  addField | 输出新建标签时的字段 |
+| editField | 输出编辑标签时的字段 |
 
 ####
