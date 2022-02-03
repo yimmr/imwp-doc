@@ -55,7 +55,7 @@ class TestSettings
 }
 ```
 
-接着主类中挂载钩子，钩子执行时传入主类对象并实例化 `Settings` 类的对象，下面是主类的方法：
+接着**主类中挂载钩子**，钩子执行时传入主类对象并实例化 `Settings` 类的对象，下面是主类的方法：
 
 ```php
 public function admin_init()
@@ -74,7 +74,16 @@ public function outputField()
 }
 ```
 
-结合自定义页面使用时，可以使用 [页面组件](cai-dan-ye-mian.md) 输出所有HTML内容。例如添加一个 `test` 页面，然后使用页面组件创建一个渲染 `Settings API` 表单的闭包：
+结合[表单组件](zu-jian-1.md)使用时，上面的方法可以这样写：
+
+```php
+public function outputField()
+{
+    echo Form::checkbox($this->theme->prefix('disable_sidebar'), 1, $this->theme->getOption('disable_sidebar'));
+}
+```
+
+在自定义页面使用时，可用 [页面组件](cai-dan-ye-mian.md) 输出所有HTML内容。例如添加一个 `test` 页面，然后使用页面组件创建一个渲染 `Settings API` 表单的闭包：
 
 ```php
 \add_menu_page('test', 'test', 'manage_options', 'test', MenuPage::factory('测试页面标题', 'test-page'));
