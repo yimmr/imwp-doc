@@ -27,7 +27,6 @@
 * [轻量服务](zong-he/fu-wu.md)
 * [文件系统](zong-he/wen-jian-xi-tong.md)
 * [脚本队列](zong-he/jiao-ben-dui-lie.md)
-* [表单配置](can-kao/biao-dan-pei-zhi.md)
 
 ## 参考
 
