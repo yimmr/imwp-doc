@@ -14,12 +14,11 @@
 * [设置](hou-tai-gong-neng/tian-jia-ye-mian.md)
 * [页面组件](hou-tai-gong-neng/cai-dan-ye-mian.md)
 * [表单组件](hou-tai-gong-neng/zu-jian-1.md)
-* [类型&分类法](hou-tai-gong-neng/lei-xing-fen-lei-fa-1.md)
 
 ## 综合
 
+* [类型&分类法](zong-he/lei-xing-fen-lei-fa-1.md)
 * [视图&数据](zong-he/shi-tu-shu-ju.md)
-* [文件系统](zong-he/wen-jian-xi-tong.md)
 
 ## 参考
 
