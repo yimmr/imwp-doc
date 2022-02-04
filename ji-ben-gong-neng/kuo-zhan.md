@@ -38,3 +38,9 @@ Trait全名： `Impack\WP\Base\ContainerTrait` 。
 * make: 获取或构建单例
 * forgetInstance: 移除单例
 * useConfig: 构建并添加 `config` 单例
+
+### 文件系统
+
+提供了用于引入并初始化 WP 文件系统实例的方法：`wpFilesystem()` 。
+
+Trait全名： `Impack\WP\Base\FilesystemTrait` 。

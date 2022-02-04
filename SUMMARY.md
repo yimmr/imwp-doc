@@ -14,19 +14,12 @@
 * [设置](hou-tai-gong-neng/tian-jia-ye-mian.md)
 * [页面组件](hou-tai-gong-neng/cai-dan-ye-mian.md)
 * [表单组件](hou-tai-gong-neng/zu-jian-1.md)
-
-## 注册管理
-
-* [类型&分类法](zhu-ce-guan-li/lei-xing-fen-lei-fa-1.md)
-* [MetaBox](zhu-ce-guan-li/metabox.md)
-* [TaxField](zhu-ce-guan-li/taxfield.md)
+* [类型&分类法](hou-tai-gong-neng/lei-xing-fen-lei-fa-1.md)
 
 ## 综合
 
 * [视图&数据](zong-he/shi-tu-shu-ju.md)
-* [轻量服务](zong-he/fu-wu.md)
 * [文件系统](zong-he/wen-jian-xi-tong.md)
-* [脚本队列](zong-he/jiao-ben-dui-lie.md)
 
 ## 参考
 
