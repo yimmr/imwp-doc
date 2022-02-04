@@ -40,8 +40,8 @@ class Theme extends Core
 
 |             方法             |          说明         |
 | :------------------------: | :-----------------: |
-|           prefix           |       创建带前缀的名称      |
-|          hiddenKey         | 创建带前缀且隐藏的 `MetaKey` |
+|           prefix           |      为指定名称添加前缀      |
+|          hiddenKey         | 创建含前缀且隐藏的 `MetaKey` |
 |           action           |     动作钩子与对象方法绑定     |
 |           filter           |     过滤钩子与对象方法绑定     |
 | path/publicPath/configPath |  拼接路径（基于实例化时提供的目录）  |

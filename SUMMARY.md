@@ -7,7 +7,6 @@
 * [核心](ji-ben-gong-neng/he-xin.md)
 * [Trait](ji-ben-gong-neng/kuo-zhan.md)
 * [配置](ji-ben-gong-neng/pei-zhi.md)
-* [Helper](ji-ben-gong-neng/helper.md)
 
 ## 后台功能
 
@@ -19,6 +18,7 @@
 
 * [类型&分类法](zong-he/lei-xing-fen-lei-fa-1.md)
 * [视图&数据](zong-he/shi-tu-shu-ju.md)
+* [Helper](zong-he/helper.md)
 
 ## 参考
 
