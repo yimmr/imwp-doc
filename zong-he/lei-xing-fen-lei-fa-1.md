@@ -15,7 +15,7 @@
 | :---------: | :---: | :--------------------------------------------------------------------------: |
 |  taxonomies | array |                                    分类法参数数组                                   |
 | meta\_boxes | array |                                    元框参数数组                                    |
-|     meta    | array | meta\_key 与 register\_post\_meta [参数](../can-kao/meta-can-shu.md#meta)的键值对数组 |
+|     meta    | array | meta\_key 与 `register_post_meta` [参数](../can-kao/meta-can-shu.md#meta)的键值对数组 |
 
 余下的可参考 [WP的PostType参数](../can-kao/zhu-ce-de-can-shu.md#zhu-ce-can-shu)。
 
@@ -24,7 +24,7 @@
 |   名称   |   类型  |                                      说明                                      |
 | :----: | :---: | :--------------------------------------------------------------------------: |
 | fields | array |         [分类法字段类](lei-xing-fen-lei-fa-1.md#fen-lei-fa-zi-duan-lei)的类名         |
-|  meta  | array | meta\_key 与 register\_term\_meta [参数](../can-kao/meta-can-shu.md#meta)的键值对数组 |
+|  meta  | array | meta\_key 与 `register_term_meta` [参数](../can-kao/meta-can-shu.md#meta)的键值对数组 |
 
 余下的可参考 [WP的Taxonomy参数](../can-kao/taxonomy-can-shu.md#zhu-ce-can-shu)。
 
