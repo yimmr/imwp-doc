@@ -1,17 +1,17 @@
-# Meta相关
+# Meta
 
 ## Meta
 
-|         名称         |     类型     |   默认值  |         说明        |
-| :----------------: | :--------: | :----: | :---------------: |
-|   object\_subtype  |   string   |   ''   |     子类型，如post     |
-|        type        |    strin   | string |        数据类型       |
-|     description    |   string   |   ''   |        简短描述       |
-|       default      |    mixed   |   ''   |        默认值        |
-|       single       |    bool    |  false |   meta键是单值还是一组值   |
-| sanitize\_callback |  callable  |  null  | 过滤$meta\_key数据的回调 |
-|   auth\_callback   |  callable  |  null  |      检查权限的回调      |
-|   show\_in\_rest   | bool,array |  false |    是否支持REST API   |
+|         名称         |     类型     |   默认值  |       说明      |
+| :----------------: | :--------: | :----: | :-----------: |
+|   object\_subtype  |   string   |   ''   |   子类型，如post   |
+|        type        |    strin   | string |      数据类型     |
+|     description    |   string   |   ''   |      简短描述     |
+|       default      |    mixed   |   ''   |      默认值      |
+|       single       |    bool    |  false | meta键是单值还是一组值 |
+| sanitize\_callback |  callable  |  null  |    过滤数据的回调    |
+|   auth\_callback   |  callable  |  null  |    检查权限的回调    |
+|   show\_in\_rest   | bool,array |  false |  是否支持REST API |
 
 ## MetaBox
 
