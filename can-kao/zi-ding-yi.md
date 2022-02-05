@@ -1,5 +1,18 @@
 # Customize
 
+### 队列钩子
+
+|                   名称                  |     说明     |   |
+| :-----------------------------------: | :--------: | - |
+| customize\_controls\_enqueue\_scripts | 控件区域加载脚本样式 |   |
+|        customize\_preview\_init       | 预览区域加载脚本样式 |   |
+
+{% hint style="success" %}
+区域控件脚本的依赖项一般是：`['customize-controls', 'jquery']`
+
+预览区域脚本的依赖项一般是：`['customize-preview', 'jquery']`
+{% endhint %}
+
 ### 面板
 
 |         name         |        type       | description |        default       |
