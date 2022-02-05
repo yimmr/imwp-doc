@@ -1,4 +1,4 @@
-# PostType
+# Post Type
 
 ## 注册参数
 
@@ -33,7 +33,7 @@
 |    delete\_with\_user   |      bool     |                                                      null                                                     |                                     删除用户时删除此类型帖子                                    |
 |         template        |     array     |                                                      \[]                                                      |                                       编辑器默认块数组                                      |
 |      template\_lock     | string\|false |                                                     false                                                     |                                       是否锁定块模板                                       |
-|        \_builtin        |      bool     |                                                     false                                                     |                                        仅内部使用                                        |
+|        \_builtin        |      bool     |                                                     false                                                     |                                    （仅内部使用）是否是内置类型                                   |
 |       \_edit\_link      |     string    |                                                post.php?post=%d                                               |                                        仅内部使用                                        |
 
 ### 示例
