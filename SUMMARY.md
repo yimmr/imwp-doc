@@ -18,6 +18,7 @@
 
 * [类型&分类法](zong-he/lei-xing-fen-lei-fa-1.md)
 * [视图&数据](zong-he/shi-tu-shu-ju.md)
+* [REST路由](zong-he/rest-lu-you.md)
 * [Helper](zong-he/helper.md)
 
 ## 参考
