@@ -20,6 +20,7 @@
 * [视图&数据](zong-he/shi-tu-shu-ju.md)
 * [REST路由](zong-he/rest-lu-you.md)
 * [Helper](zong-he/helper.md)
+* [演示数据管理](zong-he/yan-shi-shu-ju-guan-li.md)
 
 ## 参考
 
