@@ -101,6 +101,30 @@
 
 任务文件中可以定义数据，如果数据比较多或者需要复用时，将JSON数据迁移到 `actions/data` 目录下，一个 `.json` 文件对应一种数据。可以调用 `$manager->data('filename')` 加载数据，此方法可将数据转为PHP数组。
 
+### 接口参考
+
+
+
 ### 自定义
 
-###
+自定义数据保存不复杂，同样将PHP代码放在 `actions/inc` 目录，任务文件的规则不变。主要是不使用框架的接口保存数据，自己另实现代码逻辑，此时要在 `actions/inc` 目录增加一个 `delete.php` 文件，用于删除新增的数据，此文件将在删除数据时自动调用，文件中可访问内置变量 `$context` 和 `$filename` 。
+
+自定义规则：
+
+* 每成功新增一条数据，调用管理者 `$manager->logPost()` 记录数据主键，例如发布文章成功后调用方法： `$manager->logPost('post', $postid)` 。
+* 删除数据的代码写在 `delete.php` ，变量 `$context` 储存未删除数据的主键，例如  `$context['post']` 可得之前记录的文章ID数组（始终是数组），删除数据后需要移除变量中对应的值。
+* &#x20;内置 `$filename` 变量保存任务文件名，可用于判断当前删除的是哪个任务的数据。
+
+简单的数据删除逻辑示例：
+
+```php
+if ($context['post'] = array_filter($context['post'], function ($id) {
+    return !wp_delete_post($id, true);
+})) {
+    unset($context['post']);
+}
+```
+
+{% hint style="warning" %}
+如果不过滤 `$context` 变量值，则需要手动打开 `logs` 目录删除记录，不建议这样做，可能删错。
+{% endhint %}
