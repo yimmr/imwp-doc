@@ -97,9 +97,9 @@
 
 ### 静态资源
 
-图片、视频等将上传到媒体库的文件统一放在 `actions/uploads` 目录下，调用 `$manager->uploadPh()` 可以拼接路径，也可以不用拼路径，调用 `$media->uploadIf()` 上传文件到媒体库。
+图片、视频等将上传到媒体库的文件统一放在 `actions/uploads` 目录下，可以调用 `$media->uploadIf('filename')` 上传文件到媒体库。
 
-任务文件中可以定义数据，如果数据比较多或者需要复用时，将JSON数据迁移到 `actions/data` 目录下，一个 `.json` 文件对应一种数据。
+任务文件中可以定义数据，如果数据比较多或者需要复用时，将JSON数据迁移到 `actions/data` 目录下，一个 `.json` 文件对应一种数据。可以调用 `$manager->data('filename')` 加载数据，此方法可将数据转为PHP数组。
 
 ### 自定义
 
