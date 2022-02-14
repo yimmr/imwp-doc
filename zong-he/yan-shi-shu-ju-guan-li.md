@@ -99,11 +99,35 @@
 
 图片、视频等将上传到媒体库的文件统一放在 `actions/uploads` 目录下，可以调用 `$media->uploadIf('filename')` 上传文件到媒体库。
 
-任务文件中可以定义数据，如果数据比较多或者需要复用时，将JSON数据迁移到 `actions/data` 目录下，一个 `.json` 文件对应一种数据。可以调用 `$manager->data('filename')` 加载数据，此方法可将数据转为PHP数组。
+任务文件中可以定义数据，如果数据比较多或者需要复用时，将JSON数据迁移到 `actions/data` 目录下，一个 `.json` 文件对应一种数据。可以调用 `$manager->data('name')` 加载数据，此方法可将数据转为PHP数组，参数是不带后缀的文件名。
 
 ### 接口参考
 
+**$media**
 
+|    名称    |     参数    |       返回值      | 说明            |     |
+| :------: | :-------: | :------------: | ------------- | :-: |
+|  upload  | $filename | int\|WP\_Error | 本地文件添加到媒体库    |     |
+| uploadIf | $filename |       int      | 文件不在媒体库时移到媒体库 |     |
+
+**$modelSave**
+
+|     名称     |                            参数                            |        返回值       | 说明                   |     |
+| :--------: | :------------------------------------------------------: | :--------------: | -------------------- | :-: |
+|    post    |      $data, $wpError = false, $fireAfterHooks = true     |  int\|WP\_Error  | 保存帖子                 |     |
+|   postIf   |                    $data, $args = \[]                    |        int       | 帖子不存在时新增             |     |
+|    term    |            $term, $taxonomy = '', $args = \[]            | array\|WP\_Error | 保存术语                 |     |
+|   termIf   |           $term, $taxonomy = '', $parent = null          |    int\|int\[]   | 术语不存在时新增术语，支持递归创建父子项 |     |
+|   comment  |                           $data                          |    int\|false    | 保存评论                 |     |
+|  commentIf |                    $data, $args = \[]                    |        int       | 评论不存在时新增             |     |
+|    user    |                           $data                          |  int\|WP\_Error  | 保存用户数据               |     |
+|   userIf   |                    $data, $args = \[]                    |        int       | 用户不存在时新增             |     |
+|  metadata  | metadata($type, $objectID, $key, $value, $unique = false |    int\|false    | 保存yua数据              |     |
+| dataFilter |                &$data, $keys, $prefix = ''               |       array      | 使用键名过滤数据数组           |     |
+
+{% hint style="success" %}
+后缀 `If` 的方法支持先查询数据，数据不存在才新增数据，如果参数有 `$args` 则支持提供自定义的查询参数。
+{% endhint %}
 
 ### 自定义
 
