@@ -132,18 +132,20 @@
 
 **$modelSave**
 
-|     名称     |                            参数                            |        返回值       | 说明                   |     |
-| :--------: | :------------------------------------------------------: | :--------------: | -------------------- | :-: |
-|    post    |      $data, $wpError = false, $fireAfterHooks = true     |  int\|WP\_Error  | 保存帖子                 |     |
-|   postIf   |                    $data, $args = \[]                    |        int       | 帖子不存在时新增             |     |
-|    term    |            $term, $taxonomy = '', $args = \[]            | array\|WP\_Error | 保存术语                 |     |
-|   termIf   |           $term, $taxonomy = '', $parent = null          |    int\|int\[]   | 术语不存在时新增术语，支持递归创建父子项 |     |
-|   comment  |                           $data                          |    int\|false    | 保存评论                 |     |
-|  commentIf |                    $data, $args = \[]                    |        int       | 评论不存在时新增             |     |
-|    user    |                           $data                          |  int\|WP\_Error  | 保存用户数据               |     |
-|   userIf   |                    $data, $args = \[]                    |        int       | 用户不存在时新增             |     |
-|  metadata  | metadata($type, $objectID, $key, $value, $unique = false |    int\|false    | 保存yua数据              |     |
-| dataFilter |                &$data, $keys, $prefix = ''               |       array      | 使用键名过滤数据数组           |     |
+|     名称     |                            参数                            |          返回值          | 说明                   |     |
+| :--------: | :------------------------------------------------------: | :-------------------: | -------------------- | :-: |
+|    menu    |             $location, $items, $cover = true             | int\[]\|\WP\_Error\[] | 创建并添加菜单              |     |
+|  menuMany  |                 $locations, $cover = true                | int\[]\|\WP\_Error\[] | 创建多个位置的菜单            |     |
+|    post    |      $data, $wpError = false, $fireAfterHooks = true     |     int\|WP\_Error    | 保存帖子                 |     |
+|   postIf   |                    $data, $args = \[]                    |          int          | 帖子不存在时新增             |     |
+|    term    |            $term, $taxonomy = '', $args = \[]            |    array\|WP\_Error   | 保存术语                 |     |
+|   termIf   |           $term, $taxonomy = '', $parent = null          |      int\|int\[]      | 术语不存在时新增术语，支持递归创建父子项 |     |
+|   comment  |                           $data                          |       int\|false      | 保存评论                 |     |
+|  commentIf |                    $data, $args = \[]                    |          int          | 评论不存在时新增             |     |
+|    user    |                           $data                          |     int\|WP\_Error    | 保存用户数据               |     |
+|   userIf   |                    $data, $args = \[]                    |          int          | 用户不存在时新增             |     |
+|  metadata  | metadata($type, $objectID, $key, $value, $unique = false |       int\|false      | 保存yua数据              |     |
+| dataFilter |                &$data, $keys, $prefix = ''               |         array         | 使用键名过滤数据数组           |     |
 
 **$Multiple**
 
