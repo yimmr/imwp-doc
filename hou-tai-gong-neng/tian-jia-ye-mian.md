@@ -27,7 +27,7 @@
 
 一般在 `admin_init` 钩子中执行以下方法&#x20;
 
-1\. 注册设置 - 将创建一个 option 。默认选项组 `general`、`discussion`、`media`、 `reading`、`writing` 和 `options` 。
+1\. **注册设置** - 将创建一个 option 。默认选项组 `general`、`discussion`、`media`、 `reading`、`writing` 和 `options` 。
 
 ```php
 register_setting(
@@ -37,9 +37,9 @@ register_setting(
 );
 ```
 
-2\. 添加分区 - 包含标题和一组表单字段的容器。默认页面 `general`, `reading`, `writing`, `discussion`、`media` 。
+2\. **添加分区** - 包含标题和一组表单字段的容器。默认页面 `general`, `reading`, `writing`, `discussion`、`media` 。
 
-一个包含 title, id, callback 的数组将作为参数传给回调函数
+回调函数可接收一个包含 title, id, callback 的数组参数
 
 ```php
 add_settings_section(
@@ -50,7 +50,7 @@ add_settings_section(
 );
 ```
 
-3\. 添加表单字段 - `$args` 参数也传给回调函数
+3\. 回调函数可接收 - `$args` 参数也提供给回调函数
 
 ```php
 add_settings_field(
