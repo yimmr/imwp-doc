@@ -18,7 +18,7 @@ composer require impack/wordpress
 
 ### 目录结构
 
-基本结构可参考 [WordPress 开发者文档](https://developer.wordpress.org)，还可参考此表格中的内容来组织文件：
+基本结构可参考 [WordPress 开发者文档](https://developer.wordpress.org/)，还可参考此表格中的内容来组织文件：
 
 |   名称   |   说明   |
 | :----: | :----: |
