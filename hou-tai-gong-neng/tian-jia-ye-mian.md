@@ -50,7 +50,7 @@ add_settings_section(
 );
 ```
 
-3\. 回调函数可接收 - `$args` 参数也提供给回调函数
+3\. **添加字段** - `$args` 参数也提供给回调函数
 
 ```php
 add_settings_field(
@@ -63,7 +63,7 @@ add_settings_field(
 );
 ```
 
-4\. 渲染页面 - 下列函数不包含 `<form>` 标签
+4\. **渲染页面** - 下列函数不包含 `<form>` 标签
 
 ```php
 // 输出安全验证相关隐藏字段
@@ -72,6 +72,16 @@ settings_fields($option_group);
 do_settings_sections($page);
 // 保存按钮
 submit_button('Save');
+```
+
+5\. **通知信息** - WordPress 将在 URL 中添加 `settings-updated` 参数，可在页面中判断显示消息。
+
+```php
+if (isset($_GET['settings-updated'])) {
+    add_settings_error('setting', 'code', __('Settings Saved'), 'updated');
+}
+
+settings_errors('setting');
 ```
 
 ### Options API
