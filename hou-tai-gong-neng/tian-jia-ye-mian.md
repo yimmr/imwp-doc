@@ -25,7 +25,9 @@
 
 ### 用法
 
-1\. 注册设置 - 将创建一个 option
+一般在 `admin_init` 钩子中执行以下方法&#x20;
+
+1\. 注册设置 - 将创建一个 option 。默认选项组 `general`、`discussion`、`media`、 `reading`、`writing` 和 `options` 。
 
 ```php
 register_setting(
@@ -35,7 +37,9 @@ register_setting(
 );
 ```
 
-2\. 添加分区 - 包含标题和一组表单字段的容器
+2\. 添加分区 - 包含标题和一组表单字段的容器。默认页面 `general`, `reading`, `writing`, `discussion`、`media` 。
+
+一个包含 title, id, callback 的数组将作为参数传给回调函数
 
 ```php
 add_settings_section(
@@ -46,7 +50,7 @@ add_settings_section(
 );
 ```
 
-3\. 添加表单字段
+3\. 添加表单字段 - `$args` 参数也传给回调函数
 
 ```php
 add_settings_field(
@@ -57,6 +61,17 @@ add_settings_field(
     string $section = 'default',
     array $args = []
 );
+```
+
+4\. 渲染页面 - 下列函数不包含 `<form>` 标签
+
+```php
+// 输出安全验证相关隐藏字段
+settings_fields($option_group);
+// 输出分区，函数自动调用 do_settings_fields()
+do_settings_sections($page);
+// 保存按钮
+submit_button('Save');
 ```
 
 ### Options API
