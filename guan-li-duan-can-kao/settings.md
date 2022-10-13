@@ -12,7 +12,7 @@
 | :----------------: | :---------: | :-----------------------------------------------------------------------------------: | :----: |
 |        type        |    string   | 数据类型。Valid values are 'string', 'boolean', 'integer', 'number', 'array', and 'object' | string |
 |     description    |    string   |                                           描述                                          |   ''   |
-| sanitize\_callback |   callable  |                                       清理选项值的回调函数                                      |  null  |
+| sanitize\_callback |   callable  |                                       过滤选项值的回调函数                                      |  null  |
 |   show\_in\_rest   | bool\|array |                        是否出现在 REST API 中。参数还可以是 'schema' key 数组。                       |  false |
 |       default      |    mixed    |                                          默认值                                          |        |
 
