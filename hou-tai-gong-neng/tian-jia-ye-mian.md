@@ -193,5 +193,5 @@ add_action('admin_menu',function (){
 ```
 
 {% hint style="success" %}
-添加菜单的 ￥
+添加菜单的 `$slug` 参数可以与注册 `$settings` 的不同，因为渲染 Settings API 表单的函数需要提供的 `$page` 参数不是 `$menu_slug` 而是注册 `$settings` 的 `$page` 。
 {% endhint %}
