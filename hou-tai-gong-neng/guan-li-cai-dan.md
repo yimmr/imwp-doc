@@ -44,7 +44,9 @@ add_submenu_page(
 2. **插件**可以将模块文件路径传给 `$menu_slug` 参数，而 `$function` 参数设为 `null` 。
 3. 移除菜单 `remove_menu_page(string $menu_slug)` ，仅从 UI 上移除，用户仍可以直接访问。
 4. 获取菜单页面 URL `menu_page_url($menu_slug)` 。
-5. 顶级菜单和子级菜单共享页面的方式：顶级不设置回调或回调为 `null` ，子级使用的 `$slug` 与顶级相同。
+5. 获取页面标题 `get_admin_page_title()`&#x20;
+6. 获取页面当前屏幕对象 `get_current_screen()`&#x20;
+7. 顶级菜单和子级菜单共享页面的方式：顶级不设置回调或回调为 `null` ，子级使用的 `$slug` 与顶级相同。
 
 ### 父级 Slug 和添加对应子菜单的函数：
 
