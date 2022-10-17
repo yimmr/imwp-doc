@@ -32,10 +32,9 @@ add_submenu_page(
 #### 处理表单数据
 
 1. 使用 [Settings API](tian-jia-ye-mian.md) 。
-2. 添加菜单页面的函数均返回一个 `$hookname` ，钩子 `load-$hookname` 在输出任何 HTML 前执行，可以用来处理表单数据。需要手动执行必要的检查：
-3. 判断是否有表单提交 (`'POST' === $_SERVER['REQUEST_METHOD']`).
-4. CSRF 验证
-5. 数据清理和验证
+2. 扩展管理员页面的函数均返回 `$hookname` ，在输出 HTML 前会执行 `load-$hookname` 钩子，可将处理表单数据的回调添加到钩子。回调内要进行必要的检查：
+   * 判断是否有表单提交 (`'POST' === $_SERVER['REQUEST_METHOD']`).
+   * CSRF 、数据清理验证
 
 #### 相关信息
 
