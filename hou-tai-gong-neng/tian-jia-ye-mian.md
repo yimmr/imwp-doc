@@ -96,7 +96,7 @@ settings_errors('setting');
 
 ### 基于配置文件注册
 
-使用 <mark style="color:orange;">`Impack\WP\Manager\Settings`</mark> 静态类的 <mark style="color:purple;">`register()`</mark> 方法可以快速注册设置选项。此方法接受一个数组参数，数据结构如下：
+使用 <mark style="color:orange;">`Impack\WP\Manager\Settings`</mark> 静态类的 <mark style="color:purple;">`register()`</mark> 方法可以快速注册设置项。此方法接受一个数组参数，数据结构如下：
 
 ```php
 [
