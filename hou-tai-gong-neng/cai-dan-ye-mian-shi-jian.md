@@ -33,32 +33,54 @@ class AdminPage
 页面类的方法将用于输出菜单页面和钩子的回调，此时要先进行实例化，若不想在未打开页面时创建实例，可使用以下办法：
 
 1. 页面类使用静态方法
-2. 使用注册管理类 `Impack\WP\Manager\AdminRegister`
+2. 使用主类容器
 
-#### 使用注册管理类
+#### 使用主类容器示例
 
 ```php
-AdminRegister::bindAdminPage(TestPage::class, \add_menu_page(
-  '自定义',
-  '自定义页面标题',
-  'manage_options',
-  'custom-page-slug',
-  fn() => AdminRegister::currentAdminPageCall('render')
-));
+<?php
+
+namespace APP;
+
+use APP\Admin\TestPage;
+use Impack\WP\Base\ContainerTrait;
+use Impack\WP\Base\PathTrait;
+
+class Main
+{
+    use PathTrait, ContainerTrait;
+
+    public function boot()
+    {
+        static::$instance = $this;
+        \add_action('admin_menu', [$this, 'admin_menu']);
+        \add_action('admin_enqueue_scripts', [$this, 'admin_enqueue_scripts']);
+    }
+
+    public function admin_menu()
+    {
+        $hookSuffix = \add_menu_page(
+            '自定义页面',
+            '自定义',
+            'manage_options',
+            'custom-page-slug',
+            fn() => $this->make(\get_current_screen()->id)->render()
+        );
+
+        $this->singleton($hookSuffix, TestPage::class);
+
+        \add_action('load-' . $hookSuffix, fn() => $this->make($hookSuffix)->load());
+    }
+
+    public function admin_enqueue_scripts($hookSuffix)
+    {
+        if ($this->has($hookSuffix)) {
+            $this->make($hookSuffix)->enqueueScripts();
+        }
+    }
+}
 ```
 
-注册管理类提供的相关方法：
+示例中在主类中以单例形式注册页面类，并使用箭头函数做回调，回调函数被调用时获取页面的单例并执行指定方法。
 
-<mark style="color:purple;">**`bindAdminPage`**</mark>**  **  - **** 注册页面类
-
-* <mark style="color:red;">`$abstract`</mark>  页面类名
-* <mark style="color:red;">`$hookSuffix`</mark>  添加菜单页面函数返回的钩子
-* <mark style="color:red;">`$withLoad = false`</mark>  是否添加 `load-{hook_suffix}` 钩子
-
-<mark style="color:purple;">**`bindAdminPageFull`**</mark>**  **  -  注册页面类并完整添加钩子，如 `load-{hook}` 、入队脚本样式。
-
-* 参数有同上个方法的前两个参数
-
-<mark style="color:purple;">**`currentAdminPageCall`**</mark>**  **  -  调用当前页面对象的一个方法
-
-* <mark style="color:red;">`$method`</mark>  方法名
+在引入脚本样式时会判断当前页面 `$hookSuffix` (id) 是否注册过页面类，若有则获取页面单例并引入该页面的脚本样式。
