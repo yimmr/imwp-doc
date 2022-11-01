@@ -10,6 +10,7 @@
 
 ## 后台功能
 
+* [菜单页面实践](hou-tai-gong-neng/cai-dan-ye-mian-shi-jian.md)
 * [管理菜单](hou-tai-gong-neng/guan-li-cai-dan.md)
 * [Settings](hou-tai-gong-neng/tian-jia-ye-mian.md)
 * [页面组件](hou-tai-gong-neng/cai-dan-ye-mian.md)
