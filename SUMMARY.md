@@ -1,6 +1,7 @@
 # Table of contents
 
 * [入门](README.md)
+* [开发思路](kai-fa-si-lu.md)
 
 ## 基本功能
 

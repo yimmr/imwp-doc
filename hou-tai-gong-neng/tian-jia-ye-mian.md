@@ -12,18 +12,14 @@
 
 ### 函数参考
 
-|                                                 设置                                                |                                                  分区/字段                                                  |   |
-| :-----------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: | - |
-|   [register\_setting()](https://developer.wordpress.org/reference/functions/register\_setting/)   | [add\_settings\_section()](https://developer.wordpress.org/reference/functions/add\_settings\_section/) |   |
-| [unregister\_setting()](https://developer.wordpress.org/reference/functions/unregister\_setting/) |   [add\_settings\_field()](https://developer.wordpress.org/reference/functions/add\_settings\_field/)   |   |
+<table><thead><tr><th align="center">设置</th><th align="center">分区/字段</th><th data-hidden></th></tr></thead><tbody><tr><td align="center"><a href="https://developer.wordpress.org/reference/functions/register_setting/">register_setting()</a></td><td align="center"><a href="https://developer.wordpress.org/reference/functions/add_settings_section/">add_settings_section()</a></td><td></td></tr><tr><td align="center"><a href="https://developer.wordpress.org/reference/functions/unregister_setting/">unregister_setting()</a></td><td align="center"><a href="https://developer.wordpress.org/reference/functions/add_settings_field/">add_settings_field()</a></td><td></td></tr></tbody></table>
 
-|                                                  渲染表单选项                                                 |                                                   错误                                                  |   |
-| :-----------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: | - |
-|       [settings\_fields()](https://developer.wordpress.org/reference/functions/settings\_fields/)       |  [add\_settings\_error()](https://developer.wordpress.org/reference/functions/add\_settings\_error/)  |   |
-| [do\_settings\_sections()](https://developer.wordpress.org/reference/functions/do\_settings\_sections/) | [get\_settings\_errors()](https://developer.wordpress.org/reference/functions/get\_settings\_errors/) |   |
-|   [do\_settings\_fields()](https://developer.wordpress.org/reference/functions/do\_settings\_fields/)   |      [settings\_errors()](https://developer.wordpress.org/reference/functions/settings\_errors/)      |   |
+<table><thead><tr><th align="center">渲染表单选项</th><th align="center">错误</th><th data-hidden></th></tr></thead><tbody><tr><td align="center"><a href="https://developer.wordpress.org/reference/functions/settings_fields/">settings_fields()</a></td><td align="center"><a href="https://developer.wordpress.org/reference/functions/add_settings_error/">add_settings_error()</a></td><td></td></tr><tr><td align="center"><a href="https://developer.wordpress.org/reference/functions/do_settings_sections/">do_settings_sections()</a></td><td align="center"><a href="https://developer.wordpress.org/reference/functions/get_settings_errors/">get_settings_errors()</a></td><td></td></tr><tr><td align="center"><a href="https://developer.wordpress.org/reference/functions/do_settings_fields/">do_settings_fields()</a></td><td align="center"><a href="https://developer.wordpress.org/reference/functions/settings_errors/">settings_errors()</a></td><td></td></tr></tbody></table>
 
 ### 用法
+
+* 字段挂到指定的 `section` ，使用 `id` 标识每个分区
+* 可以挂默认 `section` ，也可以创建新的，
 
 一般在 `admin_init` 钩子中执行以下方法&#x20;
 
@@ -166,7 +162,8 @@ function imwp_test_field_cb($args)
 {
     $options = get_option('imwp_test');
     printf('&#x3C;input name="%1$s" id="%1$s" value="%2$s" class="regular-text" data-custom="%3$s">', esc_attr($args['label_for']), $options, esc_attr($args['custom_data']));
-}</code></pre>
+}
+</code></pre>
 
 注册完成后，自定义的页面需要调用内置函数输出表单HTML：
 
