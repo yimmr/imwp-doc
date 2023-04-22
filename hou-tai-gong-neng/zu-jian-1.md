@@ -8,59 +8,49 @@ description: 此组件是一个静态类，用于输出指定HTML
 
 组件完整类名： `Impack\WP\Components\Form`&#x20;
 
-### 方法
+基础组件支持PHP/JS实现，其他组件需要引入前端资产文件后使用。
 
-|    名称    |      说明      |
-| :------: | :----------: |
-|  enqueue | 页内加载所需的脚本和样式 |
-| textarea |     多行文本域    |
-|   input  |      文本框     |
-| checkbox |      复选框     |
-|   radio  |      单选框     |
-|  select  |     下拉选择     |
-|   image  |     图片上传     |
+### 字段方法
 
-每个方法的首个必需参数是字段 `name` ，最后的可选参数是标签属性数组 `attrs` ， 首个参数可以是一个合并其他参数和 `attrs` 的数组，例如下方两种传参效果一致：
+|        基础组件       |        额外属性       |         说明        |
+| :---------------: | :---------------: | :---------------: |
+|       input       |         -         |       通用输入控件      |
+|        text       |         -         |       单行文本类型      |
+|      textarea     |     rows, cols    |       多行文本框       |
+|       select      | options, multiple |        下拉选择       |
+|    checkControl   |       value       | checkbox/radio 控件 |
+| checkControlGroup | options, multiple |       一组选择控件      |
+|      checkbox     |         -         |         复选        |
+|       radio       |         -         |         单选        |
 
-```php
-Form::image('image_id', [1], '100-16:9', 3, ['class' => 'custom-image']);
+#### 通用属性
 
-Form::image([
-    'name' => 'image_id',
-    'value' => [1],
-    'size' => '100-16:9',
-    'count' => 3,
-    'class' => 'custom-image'
-]);
-```
+* name ：字段名
+* type ：类型
+* label ：可读的名称
+* default/checked ：指定默认值
+* fields : 子级字段数组，存在此项时只渲染子字段，父级只是字段组的标题，不含字段
+* description ：字段描述，支持HTML
+* title ：表单表格的行标题，没有时使用 `label` 属性。一般不需要，为避免有的字段渲染 `label` 和标题重复时使用。
 
-**图片上传组件**
+若有其他未列出的属性，将用做HTML表单元素或字段根元素的属性，或做为特定字段组件的参数。比如用 `'style' => ['objectFit' => 'cover']` 属性定义图片的样式。
 
-默认支持单张上传，如果提供 `$count` 参数则支持上传多张图片，同时 `$value` 参数必需是数组。
+{% hint style="info" %}
+单个 checkbox 类型的字段支持一个 `value` 属性，用于 `input` 的值
+{% endhint %}
 
-参数 `$size` 可设置图片大小（单位 px），仅提供数值不带单位，支持以下几种值：
+#### 多选/下拉属性
 
-* 仅提供宽度：大小宽高一致
-* 横线分隔宽-高：大小与提供的宽高一致
-* 宽-宽高比：宽为提供的宽度，再使用宽高比计算出高度。如 `100-16:9` ，宽100px，高56.25px
+* options ：一个 `label,value` 关联数组的数组
+* multiple ：是否多选
 
-使用图片上传需要引入脚本和样式：
+### JS扩展字段
 
-```php
-\add_action('admin_enqueue_scripts', [\Impack\WP\Components\Form::class, 'enqueue']);
-```
+#### 媒体上传 image/video/audio
 
-**下拉组件**
-
-参数 `$options` 是选项数组，每项数组值可以是字符串或者 `[value, label]` 数组：
-
-```php
-Form::select('fruit', '苹果',[
-    '苹果', // 组件内部将自动转为 ['苹果', '苹果']
-    ['橘子', '橘子']
-    ['火龙果', '火龙果']
-]);
-```
+* placeholder ：替代默认上传图标的占位符
+* ratio : 图片/视频显示的宽高比。基于设定的宽和高中最大那个值计算
+* width/height : 媒体显示的大小。默认高100px，宽自由
 
 ### 分类法表单组件
 

@@ -41,7 +41,7 @@ add_submenu_page(
 ### 相关内容
 
 1. 注册菜单钩子 `admin_menu` 。
-2. **插件**可以将模块文件路径传给 `$menu_slug` 参数，而 `$function` 参数设为 `null` 。
+2. **插件**可以将模板文件路径传给 `$menu_slug` 参数，而 `$function` 参数设为 `null` 。
 3. 移除菜单 `remove_menu_page(string $menu_slug)` ，仅从 UI 上移除，用户仍可以直接访问。
 4. 获取菜单页面 URL `menu_page_url($menu_slug)` 。
 5. 获取页面标题 `get_admin_page_title()`&#x20;
