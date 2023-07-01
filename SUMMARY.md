@@ -9,6 +9,11 @@
 * [Trait](ji-ben-gong-neng/kuo-zhan.md)
 * [配置](ji-ben-gong-neng/pei-zhi.md)
 
+## 古腾堡
+
+* [编辑器控件](gu-teng-bao/bian-ji-qi-kong-jian.md)
+* [Page 1](gu-teng-bao/page-1.md)
+
 ## 后台功能
 
 * [菜单页面实践](hou-tai-gong-neng/cai-dan-ye-mian-shi-jian.md)
