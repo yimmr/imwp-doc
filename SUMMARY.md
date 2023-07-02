@@ -11,7 +11,7 @@
 
 ## 古腾堡
 
-* [编辑器控件](gu-teng-bao/bian-ji-qi-kong-jian.md)
+* [总结](gu-teng-bao/zong-jie.md)
 * [Page 1](gu-teng-bao/page-1.md)
 
 ## 后台功能
