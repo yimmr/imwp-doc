@@ -12,7 +12,6 @@
 ## 古腾堡
 
 * [总结](gu-teng-bao/zong-jie.md)
-* [Page 1](gu-teng-bao/page-1.md)
 
 ## 后台功能
 
