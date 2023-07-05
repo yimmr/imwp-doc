@@ -2,6 +2,7 @@
 
 ### 包
 
+* [@wordpress/scripts](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/scripts) WP 开发架子，提供可复用的脚步集合
 * [@wordpress/data](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/data) 基于 [Redux](https://redux.js.org/) 的模块化数据管理中心
 * [@wordpress/core-data](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/core-data) 用于对 WP 核心数据的访问，自动化管理 REST API 数据
 * [@wordpress/element](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/element) 用于访问底层 React 的一个抽象层接口
@@ -10,7 +11,10 @@
 * [@wordpress/block-editor](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/block-editor) 用于构建块编辑器的组件库
 * [@wordpress/editor](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/editor) 帖子编辑器的组件库，如富文本、工具栏等
 * [@wordpress/icons](https://wordpress.github.io/gutenberg/?path=/docs/icons-icon--default) WP 图标库
-* [@wordpress/compose](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/compose) 一些钩子和工具库
+* [@wordpress/compose](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/compose) 一些 Hooks 和创建高阶组件的工具库
+* [@wordpress/hooks](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/hooks) 类似PHP钩子的JS事件管理器
+* [@wordpress/media-utils](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/media-utils) 提供 WP 媒体库上传等操作的工具包
+* [@wordpress/i18n](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/i18n) 客户端国际化翻译工具包
 
 ### 工具栏和侧边栏
 
