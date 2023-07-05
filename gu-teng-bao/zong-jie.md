@@ -16,6 +16,11 @@
 * [@wordpress/media-utils](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/media-utils) 提供 WP 媒体库上传等操作的工具包
 * [@wordpress/i18n](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/i18n) 客户端国际化翻译工具包
 
+### 注册
+
+* `parent` 定义哪些块是父块。即向父块添加时插入器才显示该块
+* `ancestor` 定义块的祖先。类似父块，但不要求是直接子块
+
 ### 工具栏和侧边栏
 
 * 基础包 <mark style="color:blue;">`@wordpress/block-editor`</mark>&#x20;
@@ -65,3 +70,13 @@
 * 以文件创建模式：将模式的注册参数写到 `php` 文件顶部注释中
   * 参数名：单词首字母大写且以空格分隔
   * 数组值：以英文逗号分隔
+
+### 嵌套块
+
+使用块编辑器的 [`<InnerBlocks>`](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/block-editor/src/components/inner-blocks) 组件构建可在块内添加其他块的单个块。
+
+* 单个块只能包含一个嵌套块组件
+* 保存嵌套块的内容用 `<InnerBlocks.Content />` 组件
+* 可使用 `useInnerBlocksProps` 钩子代替组件
+  * 该钩子可接收块的属性对象，以此来与根元素合并
+  * 可以解构出 React `children` 内部块放到元素内任意位置
