@@ -1,5 +1,15 @@
 # 总结
 
+### 包
+
+* [@wordpress/data](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/data) 基于 [Redux](https://redux.js.org/) 的模块化数据管理中心
+* [@wordpress/core-data](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/core-data) 用于对 WP 核心数据的访问，自动化管理 REST API 数据
+* [@wordpress/components](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/components) 与 WP 仪表盘共享的通用组件库
+* [@wordpress/blocks](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/blocks) 块的相关接口，如注册块、样式、变体等
+* [@wordpress/block-editor](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/block-editor) 用于构建块编辑器的组件库
+* [@wordpress/icons](https://wordpress.github.io/gutenberg/?path=/docs/icons-icon--default) WP 图标库
+* @wordpress/compose 一些钩子和工具库
+
 ### 工具栏和侧边栏
 
 * 基础包 <mark style="color:blue;">`@wordpress/block-editor`</mark>&#x20;
@@ -41,3 +51,11 @@
 ### 块变体
 
 常用于自定义核心块的属性、内部块、或类名样式等。
+
+### 块模式
+
+可用 [`register_block_pattern`](https://developer.wordpress.org/reference/functions/register\_block\_pattern/) 函数注册，也可在主题 `patterns` 文件夹中创建
+
+* 以文件创建模式：将模式的注册参数写到 `php` 文件顶部注释中
+  * 参数名：单词首字母大写且以空格分隔
+  * 数组值：以英文逗号分隔
