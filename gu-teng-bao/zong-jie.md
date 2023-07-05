@@ -68,6 +68,10 @@
 
 常用于自定义核心块的属性、内部块、或类名样式等。
 
+* `isActive` 属性用于判断是否在用该变体，值为返回布尔值的函数或属性名数组
+  * 属性名数组的判断依据为对应属性全匹配
+  * 通过这项让 WP 准确地在视图中显示该变体信息
+
 ### 块模式
 
 可用 [`register_block_pattern`](https://developer.wordpress.org/reference/functions/register\_block\_pattern/) 函数注册，也可在主题 `patterns` 文件夹中创建
