@@ -4,11 +4,13 @@
 
 * [@wordpress/data](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/data) 基于 [Redux](https://redux.js.org/) 的模块化数据管理中心
 * [@wordpress/core-data](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/core-data) 用于对 WP 核心数据的访问，自动化管理 REST API 数据
+* [@wordpress/element](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/element) 用于访问底层 React 的一个抽象层接口
 * [@wordpress/components](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/components) 与 WP 仪表盘共享的通用组件库
 * [@wordpress/blocks](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/blocks) 块的相关接口，如注册块、样式、变体等
 * [@wordpress/block-editor](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/block-editor) 用于构建块编辑器的组件库
+* [@wordpress/editor](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/editor) 帖子编辑器的组件库，如富文本、工具栏等
 * [@wordpress/icons](https://wordpress.github.io/gutenberg/?path=/docs/icons-icon--default) WP 图标库
-* @wordpress/compose 一些钩子和工具库
+* [@wordpress/compose](https://github.com/WordPress/gutenberg/tree/f3da2676af29b3b672cfb3f49317193538d72d54/packages/compose) 一些钩子和工具库
 
 ### 工具栏和侧边栏
 
