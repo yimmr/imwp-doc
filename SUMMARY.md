@@ -65,6 +65,7 @@
 
 ## 笔记
 
+* [WP加载流程](bi-ji/wp-jia-zai-liu-cheng.md)
 * [全局变量](can-kao/chang-liang/quan-ju-bian-liang-1.md)
 * [全局对象](can-kao/chang-liang/shi-li.md)
 * [实用函数](can-kao/han-shu.md)
