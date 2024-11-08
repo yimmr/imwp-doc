@@ -75,3 +75,24 @@
   * 过滤后若是假值，且当前用户可切换主题则显示错误
   * 最后返回
 * 注意：`wp_using_themes()` 函数返回真才进行模板处理
+
+### 后台加载
+
+* 各页面入口基本引入 `wp-admin/admin.php` 文件
+  * 在引入 `wp-load.php` 之前设置管理员界面的基本常量
+  * auth验证或重定向
+  * 安排定时垃圾收集和瞬态清理
+  * 设置屏幕选项，`set-screen-option` 钩子可用
+  * 注册菜单等，`admin_menu` 钩子可用
+  * 执行 `admin_init` 钩子
+  * 设置 `$page_hook` 和 `$hook_suffix` 等全局变量
+  * 初始化当前屏幕实例，`current_screen` 动作可用，接收 `WP_Screen` 实例
+  * 执行不同的 `load-` 动作：
+    * 自定义页面 `load-{$page_hook}` 和 `load-{$plugin_page}` 等
+    * 执行导入时 `load-importer-{$importer}` 可用
+    * 内置页面 `load-{$pagenow}`&#x20;
+  * 如果请求参数 `action` 不为空则执行 `admin_action_{$action}` 动作
+* 各自页面的处理，表单动作处理等
+* 输出页面 HTML&#x20;
+  * 页眉公共文件：`wp-admin/admin-header.php`&#x20;
+  * 页脚公共文件 `wp-admin/admin-header.php`&#x20;
